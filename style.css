@@ -1,0 +1,843 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#floatingButton{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 5%;
+    right: 7%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    z-index: 999999999999999;
+    background-color: #CDA64E;
+}
+
+#halfscreennav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: -100vh;
+    z-index: 99999999999999999;
+    width: 100%;
+    min-height: 60vh;
+    background-color: #CDA64E;
+}
+
+#halfscreennav i{
+    position: absolute;
+    top: 7%;
+    right: 5%;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+}
+
+.portion{
+    width: 32%;
+    min-height: 48vh;
+    padding: 30px;
+    color: #fff;
+    /* background-color: red; */
+}
+
+.portion h2{
+    font-family: 'Playfair Display';
+    font-weight: 100;
+}
+
+.halfnavlinks{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: space-evenly;
+}
+
+.halfnavlinks a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    transition: all ease-in-out .35s;
+}
+
+.halfnavlinks a:hover{
+    color: #E32458;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: fixed;
+    z-index: 99999;
+    width: 45%;
+    height: 85px;
+}
+
+#nav h5{
+    font-family: 'PlayFair Display';
+    font-size: 17px;
+    color: #CDA64E;
+}
+
+#nav #navLinks a{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 20px;
+    font-size: 12px;
+}
+
+#nav #navLinks img{
+    margin-left: 50px;
+    width: 20px;
+    transition: all ease-in-out .2s;
+}
+
+#nav #navLinks img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#back{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #131313;
+}
+
+#left{
+    position: relative;
+    width: 45%;
+    height: 100%;
+}
+
+#left #landingPageContent{
+    position: absolute;
+    top: 48%;
+    left: 47.2%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    min-height: 300px;
+    /* background-color: red; */
+    color: #fff;
+}
+
+#left #landingPageContent h1{
+    font-family: 'PlayFair Display';
+    font-size: 52px;
+    line-height: 50px;
+    font-weight: 100;
+    margin-bottom: 15px;
+}
+
+#left #landingPageContent p{
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+#left #landingPageContent button{
+    padding: 11px 22px;
+    background-color: transparent;
+    border: 2px solid rgb(224, 182, 83);
+    color: rgb(214, 174, 82);
+    font-family: 'PlayFair Display';
+    font-size: 15px;
+}
+
+
+#right{
+    display: flex;
+    width: 55%;
+    height: 100%;
+}
+
+#right #img{
+    width: 88%;
+    height: 100%;
+    background-size: cover;
+    background-position: bottom;
+}
+
+#right #sideLinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 12%;
+    height: 100%;
+}
+
+#sideLinks img{
+    width: 17px;
+    margin-top: 35px;
+}
+
+#sideLinks #sideLinksDiv{
+    width: 440px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    transform: rotate(-90deg) translate(50%, 0);
+    /* background-color: red; */
+}
+
+#sideLinksDiv a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#sideLinksDiv h4{
+    font-family: 'PlayFair Display';
+    font-size: 17px;
+    color: rgb(224, 182, 83);
+}
+
+#mainWebsite{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 100%;
+    z-index: 9999999;
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+}
+
+#greyDiv{
+    padding: 40px;
+    width: 97%;
+    height: 150vh;
+    background-color: #EDEDED;
+}
+
+#greyDiv h1{
+    font-family: 'PlayFair Display';
+    color: #707070;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+#greyDiv p{
+    font-size: 12px;
+    width: 67%;
+}
+
+#collectionsDiv{
+    display: flex;
+    width: 100%;
+    min-height: 130vh;
+    margin-top: 70px;
+    padding-left: 70px;
+}
+
+#oneDress{
+    width: 30%;
+    min-height: 300px;
+    /* background-color: red; */
+}
+
+#oneDress h4{
+    font-family: 'PlayFair Display';
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 100;
+    color: #707070;
+}
+
+#oneDress p{
+    font-size: 11px;
+    width: 100%;
+    line-height: 20px;
+    color: #8a8a8a;
+    margin-top: 15px;
+}
+
+#oneDress img{
+    width: 80%;
+    margin-left: -10px;
+}
+
+#oneDress > #button{
+    width: 150px;
+    margin-top: -10px;
+}
+
+#twoDress{
+    position: relative;
+    width: 80%;
+    margin-top: 140px;
+    min-height: 500px;
+    overflow: hidden;
+    /* background-color: rgb(145, 47, 47); */
+}
+
+#twoDress > img{
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width:80%;
+}
+
+#detailsTwoDress{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 30%;
+    min-height: 200px;
+    /* background-color: red; */
+}
+
+#detailsTwoDress h4{
+    text-align: right;
+}
+
+#detailsTwoDress p{
+    width: 100%;
+    text-align: right;
+}
+
+#detailsTwoDress  #button{
+    width: 140px;
+}
+
+#twoDress h4{
+    font-family: 'PlayFair Display';
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 100;
+    color: #707070;
+}
+
+#twoDress p{
+    font-size: 11px;
+    width: 100%;
+    line-height: 20px;
+    color: #8a8a8a;
+    margin-top: 15px;
+}
+
+#mainWebsite #about{
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px;
+    background-color: white;
+}
+
+#about #deals{
+    margin-top: 100px;
+}
+
+#about #deals h1{
+    font-family: 'Playfair Display';
+    color: #707070;
+    font-weight: 100;
+    font-size: 40px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.363);
+}
+
+#deals p{
+    width: 50%;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+#collections{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 60vh;
+    margin-top: 60px;
+    /* background-color: red; */
+}
+
+.dress{
+    position: relative;
+    width: 23%;
+    height: 60vh;
+}
+
+.dress img{
+    position: absolute;
+    bottom: -35px;
+    right: -10%;
+    width: 170px;
+}
+
+#oneProduct{
+    background-image: url('./media/model3.png');
+    background-size: contain;
+}
+
+#twoProduct{
+    background-image: url('./media/redDress.png');
+    background-size: contain;
+}
+
+#threeProduct{
+    background-image: url('./media/pinkdress.png');
+    background-size: contain;
+}
+
+#fourProduct{
+    background-image: url('./media/yellowHaar.png');
+    background-size: cover;
+    background-position: bottom;
+}
+
+#apparels{
+    width: 100%;
+    min-height: 90vh;
+    margin-top: 50px;
+    background-image: url(https://images.unsplash.com/photo-1485125639709-a60c3a500bf1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 5%, 100% 0%, 100% 94%, 0% 100%);
+}
+
+#whiteOverlay{
+    width: 100%;
+    min-height: 90vh;
+    padding: 50px 70px;
+    background-color: rgba(255,255,255, 0.85);
+}
+
+#whiteOverlay h1{
+    font-family: 'Playfair Display';
+    /* letter-spacing: 3px; */
+    font-weight: 500;
+    font-size: 42px;
+    color: #E32458;
+}
+
+#whiteOverlay p{
+    font-size: 13px;
+    width: 60%;
+    margin-top: 10px;
+    font-weight: 500;
+    line-height: 23px;
+}
+
+#whiteOverlay img{
+    width: 160px;
+    margin-top: 15px;
+}
+
+#apparelsCollection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    min-height: 220px;
+    margin-top: 30px;
+    /* background-color: yellow; */
+}
+
+.badaCircle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.363);
+}
+
+.imageWaalaCircle{
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: red;
+}
+
+#apparel1{
+    background-image: url(./media/yellowWaalaKurta.jpg);
+    background-size: cover;
+}
+
+#apparel2{
+    background-image: url(./media/jwel2.jpg);
+    background-size: cover;
+}
+
+#apparel3{
+    background-image: url(./media/bhagwarang.jpg);
+    background-size: cover;
+}
+
+#apparel4{
+    background-image: url(./media/shakalKharaabParSareeAchhiDress.jpg);
+    background-size: cover;
+}
+
+#jwellery{
+    width: 100%;
+    min-height: 90vh;
+    margin-top: 50px;
+    background-image: url(https://images.unsplash.com/photo-1521694139475-da661702d635?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
+}
+
+#jwellery #whiteOverlay h1{
+    color: #CDA64E;
+}
+
+#jwellery1{
+    background-image: url(./media/jwel1.jpg);
+    background-size: cover;
+}
+
+#jwellery2{
+    background-image: url(./media/jwel5.jpg);
+    background-size: cover;
+}
+
+#jwellery3{
+    background-image: url(./media/jwel3.jpg);
+    background-size: cover;
+}
+
+#jwellery4{
+    background-image: url(./media/jwel4.jpg);
+    background-size: cover;
+}
+
+#herbals{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1532092367580-3bd5bc78dd9d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
+    background-size: cover;
+}
+
+#herbalsOverlay{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.712); 
+}
+
+#herbalsDetails{
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    width: 65%;
+    transform: translate(0, -50%);
+    color: #fff;
+}
+
+#herbalsDetails h1{
+    font-family: 'PlayFair Display';
+    font-size: 54px;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+#herbalsDetails p{
+    font-size: 12px;
+    line-height: 22px;
+}
+
+#herbalsDetails img{
+    width: 170px;
+    margin-top: 20px;
+}
+
+#footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 30vh;
+    background-color: #131313;
+}
+
+.linkrow:nth-child(2){
+    margin: 20px 0;
+}
+
+.linkrow a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 80px;
+    font-size: 12px;
+}
+
+.linkrow a:nth-child(1){
+    margin-left: 0px;
+}
+
+#footer h4{
+    color: #CDA64E;
+    font-family: 'Playfair Display';
+    letter-spacing: 10px;
+    font-weight: 100;
+    margin-right: -10px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 992px) {
+    /* desktop */
+    #right #img{
+        background-image: url(./media/landingPageImage.png) !important;
+    }
+}
+
+
+@media only screen and (min-width: 601px) {
+    /* tablet */
+    #nav{
+        padding: 0 25px;
+    }
+    #right #img{
+        background-image: url("https://images.unsplash.com/photo-1565281756735-f5d99a69c1bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80");
+    }
+    #nav #navLinks a{
+        margin-left: 5px;
+        font-size: 10px;
+    }
+    #overlay{
+        display: none;
+    }
+    #nav #navLinks img{
+        margin-left: 20px;
+    }
+    .dress{
+        background-size: cover !important;
+        background-position: bottom !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* mobile */
+    #back{
+        background-image: url(https://images.unsplash.com/photo-1565281756735-f5d99a69c1bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80) !important;
+        background-size: cover;
+    }
+    #left{
+        display: none;
+    }
+    #right{
+        display: none;
+    }
+    #nav{
+        padding: 0 25px;
+        width: 100%;
+    }
+    #nav a{
+        display: none;
+    }
+    #overlay{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+    }
+    #detailsOfOverlay{
+        width: 90%;
+        position: absolute;
+        bottom: 10%;
+        left: 7%;
+        /* background-color: red; */
+        color: #fff;
+    }
+    #detailsOfOverlay h1{
+        font-family: 'Playfair Display';        
+        font-weight: 100;
+        line-height: 36px;
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+    #detailsOfOverlay p{
+        font-size: 14px;
+        line-height: 23px;
+        margin-bottom: 20px;
+    }
+    #detailsOfOverlay a{
+        padding: 10px 20px;
+        background-color: transparent;
+        color: #fff;
+        font-family: 'Playfair Display';
+        border: 1.2px solid white;
+        outline: none;
+    }
+
+    #greyDiv{
+        height: 173vh;
+        padding: 20px;
+    }
+
+    #greyDiv h1{
+        font-size: 30px;
+    }
+
+    #greyDiv p{
+        width: 100%;
+        margin-top:7px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    #collectionsDiv{
+        flex-direction: column;
+        margin-top: 30px;
+        padding-left: 20px;
+    }
+    #oneDress{
+        width: 100%;
+    }
+    #twoDress{
+        margin-top: 0px;
+        width: 100%;
+        min-height: 700px;
+        margin-top: 40px;
+    }
+    #twoDress > img{
+        top: 32%;
+    }
+    #detailsTwoDress{
+        width: 100%;
+        margin-top: 10px;
+        align-items: flex-start;
+    }
+    #detailsTwoDress h4{
+        text-align: left;
+    }
+    #detailsTwoDress p{
+        text-align: left;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #about{
+        margin-top: 150px;
+    }
+    #about #deals h1{
+        font-size: 30px;
+    }
+    #deals p{
+        width: 100%;
+        line-height: 20px;
+        margin-top: 16px;
+    }
+    #collections{
+        flex-direction: column;
+    }
+    .dress{
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    #apparels{
+        margin-top: 10px;
+        clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
+    }
+    #apparels #whiteOverlay{
+        padding: 50px 20px;
+    }
+    #jwellery #whiteOverlay{
+        padding: 50px 20px;
+    }
+    #apparels #whiteOverlay p{
+        width: 100%;
+    }
+    #jwellery #whiteOverlay p{
+        width: 100%;
+    }
+    #apparelsCollection{
+        flex-direction: column;
+    }
+    .badaCircle{
+        margin-bottom: 30px;
+    }
+    #herbalsDetails{
+        width: 90%;
+        padding: 0 10px;
+    }
+    .linkrow{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .linkrow a{
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    #footer{
+        padding: 30px 0;
+    }
+    #halfscreennav{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .portion{
+        min-height: 20vh;
+        padding: 20px;
+        width: 100%;
+    }
+}
+
+@media(min-width: 1024px){
+    #apparels{
+        min-height: 50vh;
+    }
+    #whiteOverlay{
+        min-height: 50vh;
+        padding: 110px 70px;
+    }
+}
